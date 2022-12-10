@@ -1,0 +1,51 @@
+let array=["Carlos","Juan","Pedro","Maria","Luisa","Rosa"];
+console.log(array);
+//Obtener el tamaño del array
+console.log(array.length);
+//Obtener el valor del primer elemento del array
+console.log(array[0]);
+//Obtener el valor del ultimo elemento del array
+console.log(array[array.length-1]);
+//Agregar un elemento al final del array
+array.push("Luis");
+//Agregar un elemento al inicio del array
+array.unshift("Isabel");
+//Eliminar el ultimo elemento del array
+array.pop();
+//Eliminar el primer elemento del array
+array.shift();
+//Eliminar un elemento en una posicion especifica
+array.splice(2,1);
+//Agregar un elemento en una posicion especifica
+array.splice(2,0,"Isabel");
+//Copiar un array
+let array2=array.slice();
+//Ordenar un array
+array.sort();
+//Invertir un array
+array.reverse();
+//Buscar el indice de un elemento
+console.log(array.indexOf("Carlos"));
+//concatenar dos arrays
+let array3=array.concat(array2);
+//Concatenar arrays usando el operador de propagacion
+let array4=[...array,...array2];
+console.log(array4);
+//Unir todos los elementos de un array en un string
+console.log(array.join(" - "));
+//Recorrer un array
+array.forEach(function(elemento,indice,array){
+    console.log(elemento,indice);
+}
+//Recorrer un array con for
+for(let i=0;i<array.length;i++){
+    console.log(array[i]);
+}
+//Recorrer un array con for in
+for(let i in array){
+    console.log(array[i]);
+}
+//Recorrer un array con for of
+for(let elemento of array){
+    console.log(elemento);
+}
